@@ -35,7 +35,7 @@ func sliceIt(arrayInt [5]int) {
 
 	aSlice := sliceHeader {
 		Length: len(arrayInt),
-		Index: &arrayInt[1],
+		Index: &arrayInt[1], // shows just a memory location. ok, broken. TODO fix it.
 	}
 	//fmt.Println("this is arrayInt in sliceIt before structy tymes: ", arrayInt)
 	fmt.Println("Hey, so we sliced your array within a function at first index: ", aSlice)
