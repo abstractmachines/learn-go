@@ -11,16 +11,12 @@ We iterate over the array here with a simple for loop.
 func anArray() [5]int {
 	var intArray [5]int
 
-	var lengthOf = len(intArray)
-
 	var val int = 0
-	for i := 0; i < 5; i++ {
+	for i := 0; i < len(intArray); i++ {
 		intArray[i] = val
 		fmt.Println(intArray[i])
 		val++
 	}
-
-	fmt.Printf("\n\nLength of array of ints is %v \n", lengthOf)
 
 	return intArray
 }
@@ -31,16 +27,23 @@ func anArray() [5]int {
 - When ranging over a slice, two values are returned for each iteration.
 The first is the index, and the second is a copy of the element at that index.
  */
-func sliceIt() {
+func sliceIt(arrayInt [5]int) {
 	type sliceHeader struct {
 		Length int
-		ZerothIndex *int
+		Index *int
 	}
 
-
+	aSlice := sliceHeader {
+		Length: len(arrayInt),
+		Index: &arrayInt[1],
+	}
+	//fmt.Println("this is arrayInt in sliceIt before structy tymes: ", arrayInt)
+	fmt.Println("Hey, so we sliced your array within a function at first index: ", aSlice)
 }
 
 func main() {
 	var intArray [5]int = anArray()
 	fmt.Println("this is the int array from main. ", intArray)
+
+	sliceIt(intArray)
 }
