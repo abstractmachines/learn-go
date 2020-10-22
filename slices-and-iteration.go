@@ -81,4 +81,19 @@ func main() {
 	 */
 	var sliceALiteral [] int = []int{5,6,7,8,9}
 	fmt.Println("sliceALiteral ", sliceALiteral[:1])
+
+	/*
+	"Make" a slice.
+	Make zeros out the values.
+	 */
+	makeSlice := make([]int, 5)
+	fmt.Println("Make() a new slice: ", makeSlice)
+	fmt.Printf("Type of slice looks like: %T\n", makeSlice)
+	fmt.Printf("Type of array looks like: %T\n", intArray)
+
+	/*
+	Append to a slice.
+	 */
+	appendedSlice := append(slice1, 101)
+	fmt.Printf("Slice: %v And append to it: %v\n", slice1, appendedSlice)
 }
