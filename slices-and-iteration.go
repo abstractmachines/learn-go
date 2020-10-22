@@ -68,8 +68,8 @@ func main() {
 	Slice to get one element of an array.
 	 */
 	//sliceSingle := intArray[:2]
-	fmt.Println("\n\narray[:2] is : ", intArray[:2], " Makes sense because index is default, and range is 0-2.")
-	fmt.Println("\n\narray[2:] is : ", intArray[2:], " Makes sense because index is 2, and range is default (whole array, or cap).")
+	fmt.Println("\n\narray[:2] is : ", intArray[:2], " No index, and prints a non-inclusive range (cap).")
+	fmt.Println("\n\narray[2:] is : ", intArray[2:], " Index/offset is at 2, and no range, so print cap from index offset.")
 
 	// "Reslice our slice and extend it:"
 	// let's use the capacity cap() of a slice to extend our slice to the full length of the array (AFTER our index into array).
