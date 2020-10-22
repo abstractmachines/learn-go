@@ -59,20 +59,26 @@ func main() {
 	var slice1 = basicSlice(intArray)
 
 	// len() : length of a slice
-	fmt.Printf("\n\nWe sliced arr[1:3], so new array is %v of len %v", slice1, len(slice1))
+	fmt.Printf("\nWe sliced arr[1:3], so new array is %v of len %v", slice1, len(slice1))
 
 	// cap() : capacity of a slice
-	fmt.Println("\n\ncap(slice) is ", cap(slice1))
+	fmt.Println("\ncap(slice) is ", cap(slice1))
 
 	/*
 	Slice to get one element of an array.
 	 */
 	//sliceSingle := intArray[:2]
-	fmt.Println("\n\narray[:2] is : ", intArray[:2], " No index, and prints a non-inclusive range (cap).")
-	fmt.Println("\n\narray[2:] is : ", intArray[2:], " Index/offset is at 2, and no range, so print cap from index offset.")
+	fmt.Println("array[:2] is : ", intArray[:2], " No index, and prints a non-inclusive range (cap).")
+	fmt.Println("array[2:] is : ", intArray[2:], " Index/offset is at 2, and no range, so print cap from index offset.")
 
 	// "Reslice our slice and extend it:"
 	// let's use the capacity cap() of a slice to extend our slice to the full length of the array (AFTER our index into array).
 	var sliceReslice = slice1[:cap(slice1)]
-	fmt.Println("\nExtend! Reslice by using [:cap(slice)] and new array is ", sliceReslice) // [0, 1, 2, 3, 4]
+	fmt.Println("Extend! Reslice by using [:cap(slice)] and new array is ", sliceReslice) // [0, 1, 2, 3, 4]
+
+	/*
+	Slice an int literal.
+	 */
+	var sliceALiteral [] int = []int{5,6,7,8,9}
+	fmt.Println("sliceALiteral ", sliceALiteral[:1])
 }
