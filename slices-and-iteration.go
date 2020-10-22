@@ -67,12 +67,12 @@ func main() {
 	/*
 	Slice to get one element of an array.
 	 */
+	//sliceSingle := intArray[:2]
+	fmt.Println("\n\narray[:2] is : ", intArray[:2], " Makes sense because index is default, and range is 0-2.")
+	fmt.Println("\n\narray[2:] is : ", intArray[2:], " Makes sense because index is 2, and range is default (whole array, or cap).")
 
-	
 	// "Reslice our slice and extend it:"
 	// let's use the capacity cap() of a slice to extend our slice to the full length of the array (AFTER our index into array).
 	var sliceReslice = slice1[:cap(slice1)]
 	fmt.Println("\nExtend! Reslice by using [:cap(slice)] and new array is ", sliceReslice) // [0, 1, 2, 3, 4]
-
-	//fmt.Println("\n")
 }
