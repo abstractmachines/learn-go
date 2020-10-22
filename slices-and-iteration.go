@@ -18,7 +18,7 @@ func createIntArray() [5]int {
 		val++
 	}
 
-	fmt.Printf("\nthe array is %v", intArray)
+	fmt.Printf("\ncreateIntArray(): the newly created array is %v", intArray)
 	return intArray
 }
 
@@ -46,6 +46,10 @@ func basicSlice(arr [5]int) []int {
 	return slice1
 }
 
+//func singleElementSlice(arr [5]int) int {
+//	var
+//}
+
 func main() {
 	var intArray [5]int = createIntArray()
 
@@ -53,13 +57,22 @@ func main() {
 	Let's perform a basic slice, and get accustomed to the slice API / methods. len() cap() etc
 	 */
 	var slice1 = basicSlice(intArray)
+
 	// len() : length of a slice
-	fmt.Printf("\nslice of that array is %v with a length of %v\n", slice1, len(slice1)) // [1, 2] with a length of 2
+	fmt.Printf("\n\nWe sliced arr[1:3], so new array is %v of len %v", slice1, len(slice1))
+
 	// cap() : capacity of a slice
-	fmt.Println("Capacity of our slice: ", cap(slice1)) // 4
+	fmt.Println("\n\ncap(slice) is ", cap(slice1))
+
+	/*
+	Slice to get one element of an array.
+	 */
+
 	
 	// "Reslice our slice and extend it:"
 	// let's use the capacity cap() of a slice to extend our slice to the full length of the array (AFTER our index into array).
 	var sliceReslice = slice1[:cap(slice1)]
-	fmt.Println("Reslice the slice, using the CAPACITY of original slice: ", sliceReslice) // [0, 1, 2, 3, 4]
+	fmt.Println("\nExtend! Reslice by using [:cap(slice)] and new array is ", sliceReslice) // [0, 1, 2, 3, 4]
+
+	//fmt.Println("\n")
 }
