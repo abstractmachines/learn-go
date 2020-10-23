@@ -10,16 +10,16 @@ How to export identifiers in Go: Capitalize it. That will inherently export that
  */
 
 type StructyPublicCapitalized struct {
-	CanHazExportCapitalized string
-	izPrivateLowercase string
+	PublicField string
+	privateField string
 }
 
 func main() {
 	fmt.Println(StructyPublicCapitalized{})
 
 	babyT := StructyPublicCapitalized{
-		CanHazExportCapitalized: "I am public",
-		izPrivateLowercase: "I am private",
+		PublicField: "I am public",
+		privateField: "I am private",
 	}
 	fmt.Println(babyT)
 }
