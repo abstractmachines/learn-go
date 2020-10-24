@@ -1,4 +1,5 @@
-## Create a Go Module
+# Create a Go Module
+
 > Step 1. Make your module that you'll export. It must have its own directory.
 
 - Make a new directory named `fakemodule` (and `cd` into that dir).
