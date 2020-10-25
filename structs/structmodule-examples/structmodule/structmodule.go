@@ -22,6 +22,6 @@ func Structmodule() string {
 	//	privateField: "I am a Private struct field",
 	//}
 	//fmt.Println(babyT)
-	var message = fmt.Sprint("hey dude")
+	var message = fmt.Sprint("hey this is the struct module...")
 	return message
 }
