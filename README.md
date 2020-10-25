@@ -15,3 +15,15 @@ Learning golang
 ## Error Handling
 - [Go Error Handling](./docs/ERROR-HANDLING.md)
 
+## Marshalling data
+- [Slices, json package, and marshalling json into slices](./marshal)
+
+## WIP : function signatures
+
+Here's a Go function signature that takes in a value of any type `v interface {}`,
+and returns a slice of bytes and an error (from package json):
+```
+func Marshal(v interface{}) ([]byte, error)
+```
+
+## WIP: pointers: look at json.Unmarshal docs.
