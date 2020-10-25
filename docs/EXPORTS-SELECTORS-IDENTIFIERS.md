@@ -2,11 +2,15 @@
 
 The Go package management ecosystem is a bit like that of npm.
 
-Modules and packages are not exported explicitly. They are exported by inference via the identifier.
+- See also: [Encapsulation](./ENCAPSULATION.md)
 
-## Identifiers
+## How to export identifiers/packages in Go: Capitalize it.
 
 > Case determines what can be exported and what cannot.
+
+Identifiers (including that of packages) are not exported explicitly.
+
+They are exported by inference via the identifier case.
 
 ## Packages
 - [all available golang packages, including source code](https://golang.org/pkg/)

@@ -1,5 +1,5 @@
 // For more info, see go101.org/article/reflection.html#struct-field-tag
-package main
+package struct_encapsulation
 
 import "fmt"
 
