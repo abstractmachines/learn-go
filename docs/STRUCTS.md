@@ -18,7 +18,7 @@ type S struct {
 
 > Optional fields, default values, and zero values
 
-- See [structs.go](./structs.go)   
+- See [structs.go](../structs/structs.go)   
 
 - Go structs have zero values (zeroing out with default values if not explicitly defined when invoked):
 ```
