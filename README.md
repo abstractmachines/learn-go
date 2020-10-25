@@ -15,3 +15,6 @@ Learning golang
 ## Error Handling
 - [Go Error Handling](./docs/ERROR-HANDLING.md)
 
+## Marshalling data
+- [Slices, json package, and marshalling json into slices](./marshal)
+
