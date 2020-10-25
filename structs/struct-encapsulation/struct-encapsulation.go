@@ -18,8 +18,8 @@ func main() {
 	fmt.Println(StructyPublicCapitalized{})
 
 	babyT := StructyPublicCapitalized{
-		PublicField: "I am public",
-		privateField: "I am private",
+		PublicField: "I am a Public struct field",
+		privateField: "I am a Private struct field",
 	}
 	fmt.Println(babyT)
 }

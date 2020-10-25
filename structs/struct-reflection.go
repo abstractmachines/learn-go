@@ -24,8 +24,8 @@ func main() {
 	fmt.Println("\nt: ", t)
 
 	x, y := t.Field(0).Tag, t.Field(1).Tag
-	fmt.Println(reflect.TypeOf(x)) // reflect.StructTag
-	fmt.Println(reflect.TypeOf(y)) // reflect.StructTag
+	fmt.Println("Type of this struct field tag is: ", reflect.TypeOf(x)) // reflect.StructTag
+	fmt.Println("Type of this struct field tag is: ", reflect.TypeOf(y)) // reflect.StructTag
 
 
 }
