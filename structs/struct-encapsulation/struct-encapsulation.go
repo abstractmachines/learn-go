@@ -1,5 +1,5 @@
 // For more info, see go101.org/article/reflection.html#struct-field-tag
-package struct_encapsulation
+package structEncapsulation
 
 import "fmt"
 
@@ -14,7 +14,7 @@ type StructyPublicCapitalized struct {
 	privateField string
 }
 
-func main() {
+func StructEncapsulation() {
 	fmt.Println(StructyPublicCapitalized{})
 
 	babyT := StructyPublicCapitalized{
