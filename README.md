@@ -1,4 +1,8 @@
 # learn-go
 Learning golang
 
-[Create a module](./docs/CREATE-MODULE.md)
+## Go Modules and package management system
+- [Go Modules and package management system](./docs/GO-MODULES.md)
+- [Create a module](./docs/CREATE-MODULE.md)
+- [Working with Go Modules](./docs/WORK-WITH-MODULES.md)
+- [Example Module]
