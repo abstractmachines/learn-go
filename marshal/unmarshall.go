@@ -18,7 +18,12 @@ func main() {
 	}
 	var animals []Animal // slice of animal
 	err := json.Unmarshal(jsonBlob, &animals) // Unmarshal jsonBlob into a slice of animals. input, output.
-	// address of operator to marshal into a slice ..
+	/*
+	Why do we need addressOf operator? Because of https://golang.org/pkg/encoding/json/#Unmarshal - function signature
+
+	func Unmarshal(data []byte, v interface{}) error
+	"Unmarshal ... stores the result in the value **pointed to by v.** " -> So, per the 2nd arg, we're writing to a pointer.
+	*/
 	if err != nil {
 		fmt.Println("error:", err)
 	}

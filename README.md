@@ -26,3 +26,4 @@ and returns a slice of bytes and an error (from package json):
 func Marshal(v interface{}) ([]byte, error)
 ```
 
+## WIP: pointers: look at json.Unmarshal docs.
