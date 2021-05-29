@@ -10,6 +10,9 @@ Learning golang ... WIP
 - [Structs](./structs/README.md)
 - [Runes (WIP)](./runes/README.md)
 
+## Go iteration with slices, structs, more
+- [Iteration with slices and structs](./iteration-slice-struct/README.md)
+
 ## Go Typing System, var, const ...
 - [Typing System, var, const)](./typing-system/README.md)
 
