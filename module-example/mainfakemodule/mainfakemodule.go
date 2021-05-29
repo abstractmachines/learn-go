@@ -9,4 +9,3 @@ func main() {
 	message := fakemodule.Fakemodule()
 	fmt.Println(message)
 }
-

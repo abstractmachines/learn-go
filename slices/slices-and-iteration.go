@@ -8,7 +8,7 @@ Arrays really aren't common in golang.
 
 YOU HAVE TO size these arrays in these args or there's a panic runtime error "slice bounds out of range [:3] with capacity 0
 ^ I bet I'm missing something about dynamic arrays, but ... remember, Go uses mostly slices, not arrays.
- */
+*/
 func createIntArray() [5]int {
 	var intArray [5]int
 
@@ -27,16 +27,16 @@ func createIntArray() [5]int {
 
 - When ranging over a slice, two values are returned for each iteration.
 The first is the index, and the second is a copy of the element at that index.
- */
+*/
 func sliceStruct(arrayInt [5]int) {
 	type sliceHeader struct {
 		Length int
-		Index *int
+		Index  *int
 	}
 
-	aSlice := sliceHeader {
+	aSlice := sliceHeader{
 		Length: len(arrayInt),
-		Index: &arrayInt[1], // shows just a memory location. ok, broken. TODO fix it.
+		Index:  &arrayInt[1], // shows just a memory location. ok, broken. TODO fix it.
 	}
 	fmt.Println("Hey, so we sliced your array within a function at first index: ", aSlice)
 }
@@ -54,8 +54,8 @@ func main() {
 	var intArray [5]int = createIntArray()
 
 	/*
-	Let's perform a basic slice, and get accustomed to the slice API / methods. len() cap() etc
-	 */
+		Let's perform a basic slice, and get accustomed to the slice API / methods. len() cap() etc
+	*/
 	var slice1 = basicSlice(intArray)
 
 	// len() : length of a slice
@@ -65,8 +65,8 @@ func main() {
 	fmt.Println("\ncap(slice) is ", cap(slice1))
 
 	/*
-	Slice to get one element of an array.
-	 */
+		Slice to get one element of an array.
+	*/
 	//sliceSingle := intArray[:2]
 	fmt.Println("array[:2] is : ", intArray[:2], " No index, and prints a non-inclusive range (cap).")
 	fmt.Println("array[2:] is : ", intArray[2:], " Index/offset is at 2, and no range, so print cap from index offset.")
@@ -77,23 +77,23 @@ func main() {
 	fmt.Println("Extend! Reslice by using [:cap(slice)] and new array is ", sliceReslice) // [0, 1, 2, 3, 4]
 
 	/*
-	Slice an int literal.
-	 */
-	var sliceALiteral [] int = []int{5,6,7,8,9}
+		Slice an int literal.
+	*/
+	var sliceALiteral []int = []int{5, 6, 7, 8, 9}
 	fmt.Println("sliceALiteral ", sliceALiteral[:1])
 
 	/*
-	"Make" a slice.
-	Make zeros out the values.
-	 */
+		"Make" a slice.
+		Make zeros out the values.
+	*/
 	makeSlice := make([]int, 5)
 	fmt.Println("Make() a new slice: ", makeSlice)
 	fmt.Printf("Type of slice looks like: %T\n", makeSlice)
 	fmt.Printf("Type of array looks like: %T\n", intArray)
 
 	/*
-	Append to a slice.
-	 */
+		Append to a slice.
+	*/
 	appendedSlice := append(slice1, 101)
 	fmt.Printf("Slice: %v And append to it: %v\n", slice1, appendedSlice)
 }

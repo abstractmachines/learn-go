@@ -1,22 +1,20 @@
 # learn-go
-Learning golang
+Learning golang ... WIP
 
-## Go Modules, package management system, exports and identifiers
-- [Exports and identifiers in Go](./docs/EXPORTS-SELECTORS-IDENTIFIERS.md)
-- [Encapsulation in Go](./docs/ENCAPSULATION.md)
-- [Go Modules and package management system](./docs/GO-MODULES.md)
-- [Create a module](./docs/CREATE-MODULE.md)
-- [Working with Go Modules](./docs/WORK-WITH-MODULES.md)
-- [Example Module](./module-example)
+## Go Data Structures and errata
 
-## Go Structs And Flexibility
-- [Go Structs](docs/STRUCTS.md)
+- [https://research.swtch.com/godata](https://research.swtch.com/godata)
 
-## Error Handling
-- [Go Error Handling](./docs/ERROR-HANDLING.md)
+- [Strings](./strings/README.md)
+- [Slices, data marshalling ...](./slices/README.md)
+- [Structs](./structs/README.md)
+- [Runes (WIP)](./runes/README.md)
 
-## Marshalling data
-- [Slices, json package, and marshalling json into slices](./marshal)
+## Go Typing System, var, const ...
+- [Typing System, var, const)](./typing-system/README.md)
+
+## Go Modules, examples, package management system, exports and identifiers
+- [Modules, Packages, Exports, Encapsulation](./module-example/README.md)
 
 ## WIP : function signatures
 
@@ -26,4 +24,4 @@ and returns a slice of bytes and an error (from package json):
 func Marshal(v interface{}) ([]byte, error)
 ```
 
-## WIP: pointers: look at json.Unmarshal docs.
+
